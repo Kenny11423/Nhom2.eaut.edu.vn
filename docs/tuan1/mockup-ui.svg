@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1900" viewBox="0 0 1600 1900">
+  <defs>
+    <style>
+      .bg { fill: #f4f7fb; }
+      .panel { fill: #ffffff; stroke: #c9d4e5; stroke-width: 2; rx: 18; ry: 18; }
+      .title { font: 700 26px Arial, sans-serif; fill: #17324d; }
+      .subtitle { font: 600 18px Arial, sans-serif; fill: #244b72; }
+      .text { font: 15px Arial, sans-serif; fill: #34516f; }
+      .muted { font: 14px Arial, sans-serif; fill: #6b7d90; }
+      .box { fill: #eef4fb; stroke: #b4c8df; stroke-width: 1.5; rx: 10; ry: 10; }
+      .btn { fill: #0d6e8a; rx: 10; ry: 10; }
+      .btn2 { fill: #2f855a; rx: 10; ry: 10; }
+      .btnText { font: 700 15px Arial, sans-serif; fill: #ffffff; }
+      .header { fill: #12344d; }
+      .accent { fill: #dcecff; }
+      .warn { fill: #fff1d6; stroke: #f0c36b; stroke-width: 1.5; rx: 10; ry: 10; }
+      .seatFree { fill: #d9f2e3; stroke: #7ac29a; stroke-width: 1.2; rx: 6; ry: 6; }
+      .seatBooked { fill: #ffdada; stroke: #e28c8c; stroke-width: 1.2; rx: 6; ry: 6; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1900"/>
+  <text class="title" x="60" y="55">Mockup giao dien chinh - Phan mem quan ly ban ve tau</text>
+  <text class="muted" x="60" y="85">Deliverable tuan 1: cac man hinh de phat trien bang Python GUI o tuan 2</text>
+
+  <rect class="panel" x="50" y="120" width="680" height="360"/>
+  <text class="subtitle" x="80" y="160">1. Man hinh dang nhap</text>
+  <rect class="header" x="80" y="185" width="620" height="55" rx="12" ry="12"/>
+  <text class="btnText" x="295" y="220">HE THONG BAN VE TAU</text>
+  <rect class="box" x="220" y="270" width="340" height="52"/>
+  <text class="text" x="240" y="302">Ten dang nhap</text>
+  <rect class="box" x="220" y="340" width="340" height="52"/>
+  <text class="text" x="240" y="372">Mat khau</text>
+  <rect class="btn" x="320" y="415" width="150" height="42"/>
+  <text class="btnText" x="365" y="441">Dang nhap</text>
+
+  <rect class="panel" x="780" y="120" width="770" height="360"/>
+  <text class="subtitle" x="810" y="160">2. Trang chu / Bang dieu khien</text>
+  <rect class="header" x="810" y="185" width="710" height="55" rx="12" ry="12"/>
+  <text class="btnText" x="840" y="220">Tong quan he thong</text>
+  <rect class="accent" x="830" y="265" width="150" height="95" rx="12" ry="12"/>
+  <rect class="accent" x="1000" y="265" width="150" height="95" rx="12" ry="12"/>
+  <rect class="accent" x="1170" y="265" width="150" height="95" rx="12" ry="12"/>
+  <rect class="accent" x="1340" y="265" width="150" height="95" rx="12" ry="12"/>
+  <text class="text" x="850" y="300">Ve da ban</text>
+  <text class="title" x="875" y="338">128</text>
+  <text class="text" x="1020" y="300">Doanh thu</text>
+  <text class="title" x="1020" y="338">52M</text>
+  <text class="text" x="1190" y="300">Chuyen trong ngay</text>
+  <text class="title" x="1220" y="338">16</text>
+  <text class="text" x="1370" y="300">Ve huy</text>
+  <text class="title" x="1395" y="338">04</text>
+  <rect class="box" x="830" y="385" width="660" height="60"/>
+  <text class="text" x="850" y="420">Menu nhanh: Tra cuu chuyen tau | Ban ve | Quan ly ve | Lich trinh | Bao cao</text>
+
+  <rect class="panel" x="50" y="530" width="1500" height="360"/>
+  <text class="subtitle" x="80" y="570">3. Man hinh tra cuu chuyen tau</text>
+  <rect class="box" x="80" y="600" width="220" height="48"/>
+  <text class="text" x="100" y="630">Ga di</text>
+  <rect class="box" x="320" y="600" width="220" height="48"/>
+  <text class="text" x="340" y="630">Ga den</text>
+  <rect class="box" x="560" y="600" width="220" height="48"/>
+  <text class="text" x="580" y="630">Ngay di</text>
+  <rect class="btn" x="805" y="600" width="150" height="48"/>
+  <text class="btnText" x="850" y="630">Tra cuu</text>
+  <rect class="box" x="80" y="680" width="1440" height="170"/>
+  <text class="text" x="100" y="715">Bang ket qua:</text>
+  <text class="muted" x="100" y="750">SE01 | Sai Gon - Nha Trang | 07:00 - 14:30 | 65 cho trong | Gia tu 350.000</text>
+  <text class="muted" x="100" y="780">SE03 | Sai Gon - Da Nang   | 08:30 - 22:10 | 24 cho trong | Gia tu 620.000</text>
+  <text class="muted" x="100" y="810">SE07 | Sai Gon - Hue       | 10:00 - 04:30 | 12 cho trong | Gia tu 710.000</text>
+
+  <rect class="panel" x="50" y="940" width="760" height="400"/>
+  <text class="subtitle" x="80" y="980">4. Man hinh chon toa - cho ngoi</text>
+  <rect class="warn" x="80" y="1010" width="700" height="42"/>
+  <text class="text" x="100" y="1038">Tau SE01 | Toa B2 | Mau xanh: con trong | Mau do: da dat</text>
+  <rect class="seatFree" x="120" y="1080" width="70" height="40"/>
+  <rect class="seatFree" x="210" y="1080" width="70" height="40"/>
+  <rect class="seatBooked" x="300" y="1080" width="70" height="40"/>
+  <rect class="seatFree" x="390" y="1080" width="70" height="40"/>
+  <rect class="seatBooked" x="480" y="1080" width="70" height="40"/>
+  <rect class="seatFree" x="570" y="1080" width="70" height="40"/>
+  <text class="text" x="142" y="1105">01</text>
+  <text class="text" x="232" y="1105">02</text>
+  <text class="text" x="322" y="1105">03</text>
+  <text class="text" x="412" y="1105">04</text>
+  <text class="text" x="502" y="1105">05</text>
+  <text class="text" x="592" y="1105">06</text>
+  <rect class="seatFree" x="120" y="1140" width="70" height="40"/>
+  <rect class="seatFree" x="210" y="1140" width="70" height="40"/>
+  <rect class="seatFree" x="300" y="1140" width="70" height="40"/>
+  <rect class="seatBooked" x="390" y="1140" width="70" height="40"/>
+  <rect class="seatFree" x="480" y="1140" width="70" height="40"/>
+  <rect class="seatFree" x="570" y="1140" width="70" height="40"/>
+  <text class="text" x="142" y="1165">07</text>
+  <text class="text" x="232" y="1165">08</text>
+  <text class="text" x="322" y="1165">09</text>
+  <text class="text" x="412" y="1165">10</text>
+  <text class="text" x="502" y="1165">11</text>
+  <text class="text" x="592" y="1165">12</text>
+  <rect class="btn2" x="560" y="1265" width="180" height="44"/>
+  <text class="btnText" x="603" y="1293">Chon ghe</text>
+
+  <rect class="panel" x="840" y="940" width="710" height="400"/>
+  <text class="subtitle" x="870" y="980">5. Man hinh lap ve / thanh toan</text>
+  <rect class="box" x="870" y="1015" width="300" height="44"/>
+  <text class="text" x="890" y="1043">Ho ten hanh khach</text>
+  <rect class="box" x="1190" y="1015" width="300" height="44"/>
+  <text class="text" x="1210" y="1043">CCCD/CMND</text>
+  <rect class="box" x="870" y="1080" width="300" height="44"/>
+  <text class="text" x="890" y="1108">So dien thoai</text>
+  <rect class="box" x="1190" y="1080" width="300" height="44"/>
+  <text class="text" x="1210" y="1108">Cho ngoi da chon: B2-08</text>
+  <rect class="warn" x="870" y="1150" width="620" height="92"/>
+  <text class="text" x="890" y="1182">Thong tin ve:</text>
+  <text class="muted" x="890" y="1212">Chuyen: SE01 | Sai Gon - Nha Trang | Gia: 350.000 VND</text>
+  <rect class="btn" x="1130" y="1270" width="170" height="46"/>
+  <text class="btnText" x="1167" y="1299">Thanh toan</text>
+
+  <rect class="panel" x="50" y="1390" width="760" height="430"/>
+  <text class="subtitle" x="80" y="1430">6. Man hinh quan ly ve</text>
+  <rect class="box" x="80" y="1460" width="210" height="46"/>
+  <text class="text" x="100" y="1489">Ma ve / CCCD / SDT</text>
+  <rect class="btn" x="310" y="1460" width="120" height="46"/>
+  <text class="btnText" x="345" y="1489">Tim</text>
+  <rect class="box" x="80" y="1535" width="700" height="210"/>
+  <text class="muted" x="100" y="1570">VE001 | Nguyen Van A | SE01 | Ghe B2-08 | Da thanh toan</text>
+  <text class="muted" x="100" y="1605">VE002 | Tran Thi B   | SE03 | Ghe C1-12 | Da dat</text>
+  <text class="muted" x="100" y="1640">VE003 | Le Van C     | SE07 | Ghe A1-05 | Da huy</text>
+  <rect class="btn2" x="470" y="1760" width="140" height="42"/>
+  <text class="btnText" x="512" y="1788">In ve</text>
+  <rect class="btn" x="630" y="1760" width="140" height="42"/>
+  <text class="btnText" x="672" y="1788">Huy ve</text>
+
+  <rect class="panel" x="840" y="1390" width="710" height="430"/>
+  <text class="subtitle" x="870" y="1430">7. Man hinh quan ly lich trinh va bao cao</text>
+  <rect class="box" x="870" y="1465" width="620" height="110"/>
+  <text class="text" x="890" y="1495">Quan ly lich trinh:</text>
+  <text class="muted" x="890" y="1525">Ma chuyen | Tau | Ga di | Ga den | Gio di | Gio den | Trang thai</text>
+  <text class="muted" x="890" y="1555">SE01 | Tau A | Sai Gon | Nha Trang | 07:00 | 14:30 | Hoat dong</text>
+  <rect class="box" x="870" y="1600" width="620" height="150"/>
+  <text class="text" x="890" y="1630">Bao cao nhanh:</text>
+  <text class="muted" x="890" y="1660">Doanh thu hom nay: 12.500.000 VND</text>
+  <text class="muted" x="890" y="1690">So ve da ban: 42</text>
+  <text class="muted" x="890" y="1720">Ti le lap day trung binh: 76%</text>
+</svg>
