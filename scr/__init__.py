@@ -1,0 +1,1 @@
+"""Train ticket desktop application."""
