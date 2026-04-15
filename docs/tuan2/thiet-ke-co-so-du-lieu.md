@@ -1,37 +1,37 @@
-# Tuan 2 - Thiet ke co so du lieu
+# Tuần 2 - Thiết kế cơ sở dữ liệu
 
-## Cong nghe
+## Công nghệ
 
-- Co so du lieu: `SQLite`
-- Backend truy cap du lieu: `sqlite3` cua Python
+- Cơ sở dữ liệu: `SQLite`
+- Backend truy cập dữ liệu: `sqlite3` của Python
 - Frontend desktop: `PySide6 + HTML/CSS/JavaScript`
-- Xu ly thong ke nhanh: `numpy`
+- Xử lý thống kê nhanh: `numpy`
 
-## Cac bang chinh
+## Các bảng chính
 
-### users
+### users (người dùng)
 
-- `id`: khoa chinh
-- `username`: ten dang nhap
-- `password`: mat khau
-- `full_name`: ten nguoi dung
-- `role`: vai tro `admin` hoac `staff`
+- `id`: khóa chính
+- `username`: tên đăng nhập
+- `password`: mật khẩu
+- `full_name`: tên người dùng
+- `role`: vai trò `admin` hoặc `staff`
 
-### stations
+### stations (ga tàu)
 
 - `id`
 - `code`
 - `name`
 - `city`
 
-### trains
+### trains (tàu)
 
 - `id`
 - `code`
 - `name`
 - `carriage_count`
 
-### carriages
+### carriages (toa tàu)
 
 - `id`
 - `train_id`
@@ -39,7 +39,7 @@
 - `seat_type`
 - `seat_count`
 
-### trips
+### trips (chuyến tàu)
 
 - `id`
 - `train_id`
@@ -52,7 +52,7 @@
 - `base_price`
 - `status`
 
-### trip_seats
+### trip_seats (chỗ ngồi chuyến tàu)
 
 - `id`
 - `trip_id`
@@ -62,14 +62,14 @@
 - `seat_price`
 - `status`
 
-### passengers
+### passengers (hành khách)
 
 - `id`
 - `full_name`
 - `id_number`
 - `phone`
 
-### tickets
+### tickets (vé)
 
 - `id`
 - `ticket_code`
@@ -81,16 +81,16 @@
 - `status`
 - `booked_at`
 
-## Quan he du lieu
+## Quan hệ dữ liệu
 
 - `trains` 1-n `carriages`
 - `trains` 1-n `trips`
 - `trips` 1-n `trip_seats`
 - `passengers` 1-n `tickets`
-- `trip_seats` 1-1 tuong doi voi `tickets` trong moi lan dat ve thanh cong
-- `users` 1-n `tickets` qua truong `booked_by`
+- `trip_seats` 1-1 tương đối với `tickets` trong mỗi lần đặt vé thành công
+- `users` 1-n `tickets` qua trường `booked_by`
 
-## Ghi chu thuc hien
+## Ghi chú thực hiện
 
-- Schema va du lieu mau duoc khoi tao trong [src/train_ticket_app/backend/database.py](/home/Kennysk/Python/preparation/src/train_ticket_app/backend/database.py)
-- File CSDL se duoc tao tu dong tai `data/train_ticket.db`
+- Schema và dữ liệu mẫu được khởi tạo trong [src/train_ticket_app/backend/database.py](/home/Kennysk/Python/preparation/src/train_ticket_app/backend/database.py)
+- File CSDL sẽ được tạo tự động tại `data/train_ticket.db`

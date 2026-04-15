@@ -1,155 +1,155 @@
-# Tuan 1 - Mo ta chuc nang
+# Tuần 1 - Mô tả chức năng
 
-## 1. Tong quan de tai
+## 1. Tổng quan đề tài
 
-**Ten de tai:** Phan mem quan ly ban ve tau bang Python
+**Tên đề tài:** Phần mềm quản lý bán vé tàu bằng Python
 
-Phan mem ho tro nhan vien va quan tri vien thuc hien cac nghiep vu chinh trong quy trinh ban ve tau:
+Phần mềm hỗ trợ nhân viên và quản trị viên thực hiện các nghiệp vụ chính trong quy trình bán vé tàu:
 
-- Quan ly thong tin ga tau, tau, lich trinh va toa ghe
-- Tra cuu chuyen tau theo ngay, ga di, ga den
-- Dat ve, ban ve, in ve va huy ve
-- Quan ly thong tin hanh khach
-- Theo doi doanh thu va tinh trang cho ngoi
+- Quản lý thông tin ga tàu, tàu, lịch trình và toa ghế
+- Tra cứu chuyến tàu theo ngày, ga đi, ga đến
+- Đặt vé, bán vé, in vé và hủy vé
+- Quản lý thông tin hành khách
+- Theo dõi doanh thu và tình trạng chỗ ngồi
 
-Ung dung du kien co the phat trien bang `Tkinter` hoac `PyQt` trong tuan 2, va ket hop co so du lieu trong tuan 3.
+Ứng dụng dự kiến có thể phát triển bằng `Tkinter` hoặc `PyQt` trong tuần 2, và kết hợp cơ sở dữ liệu trong tuần 3.
 
-## 2. Doi tuong su dung
+## 2. Đối tượng sử dụng
 
-- **Nhan vien ban ve:** tra cuu chuyen tau, lap phieu dat ve, ban ve, huy ve, tim kiem ve
-- **Quan tri vien:** quan ly danh muc ga tau, tau, toa ghe, lich trinh, tai khoan va xem bao cao
+- **Nhân viên bán vé:** tra cứu chuyến tàu, lập phiếu đặt vé, bán vé, hủy vé, tìm kiếm vé
+- **Quản trị viên:** quản lý danh mục ga tàu, tàu, toa ghế, lịch trình, tài khoản và xem báo cáo
 
-## 3. Muc tieu he thong
+## 3. Mục tiêu hệ thống
 
-- Giam thoi gian tim kiem chuyen tau va ban ve
-- Han che trung lap hoac ban trung cho ngoi
-- Quan ly du lieu hanh khach, lich su dat ve va doanh thu tap trung
-- Ho tro thong ke nhanh cho nguoi quan ly
+- Giảm thời gian tìm kiếm chuyến tàu và bán vé
+- Hạn chế trùng lặp hoặc bán trùng chỗ ngồi
+- Quản lý dữ liệu hành khách, lịch sử đặt vé và doanh thu tập trung
+- Hỗ trợ thống kê nhanh cho người quản lý
 
-## 4. Chuc nang chinh
+## 4. Chức năng chính
 
-### 4.1. Dang nhap he thong
+### 4.1. Đăng nhập hệ thống
 
-- Dang nhap bang ten tai khoan va mat khau
-- Phan quyen theo vai tro: nhan vien, quan tri vien
-- Dang xuat khoi he thong
+- Đăng nhập bằng tên tài khoản và mật khẩu
+- Phân quyền theo vai trò: nhân viên, quản trị viên
+- Đăng xuất khỏi hệ thống
 
-### 4.2. Quan ly danh muc
+### 4.2. Quản lý danh mục
 
-- Quan ly danh sach ga tau
-- Quan ly danh sach tau
-- Quan ly toa tau va so luong ghe theo tung toa
-- Quan ly loai ghe: ghe mem, ghe cung, giuong nam...
+- Quản lý danh sách ga tàu
+- Quản lý danh sách tàu
+- Quản lý toa tàu và số lượng ghế theo từng toa
+- Quản lý loại ghế: ghế mềm, ghế cứng, giường nằm...
 
-### 4.3. Quan ly lich trinh
+### 4.3. Quản lý lịch trình
 
-- Tao moi lich tau chay theo ngay
-- Khai bao ga di, ga den, gio khoi hanh, gio den
-- Gan tau va so hieu chuyen tau vao lich trinh
-- Cap nhat, khoa hoac xoa lich trinh khi can
+- Tạo mới lịch tàu chạy theo ngày
+- Khai báo ga đi, ga đến, giờ khởi hành, giờ đến
+- Gắn tàu và số hiệu chuyến tàu vào lịch trình
+- Cập nhật, khóa hoặc xóa lịch trình khi cần
 
-### 4.4. Tra cuu chuyen tau
+### 4.4. Tra cứu chuyến tàu
 
-- Tim chuyen tau theo ga di, ga den, ngay di
-- Hien thi thong tin:
-  - ma chuyen
-  - ten tau
-  - gio khoi hanh
-  - gio den
-  - so cho con trong
-  - gia ve theo loai ghe
-- Loc theo khung gio hoac loai ghe
+- Tìm chuyến tàu theo ga đi, ga đến, ngày đi
+- Hiển thị thông tin:
+  - mã chuyến
+  - tên tàu
+  - giờ khởi hành
+  - giờ đến
+  - số chỗ còn trống
+  - giá vé theo loại ghế
+- Lọc theo khung giờ hoặc loại ghế
 
-### 4.5. Ban ve / Dat ve
+### 4.5. Bán vé / Đặt vé
 
-- Chon chuyen tau tu ket qua tra cuu
-- Chon toa va cho ngoi con trong
-- Nhap thong tin hanh khach: ho ten, CCCD/CMND, so dien thoai
-- Tinh tong tien ve
-- Xac nhan dat ve hoac thanh toan ngay
-- Tao ma ve duy nhat cho moi giao dich
+- Chọn chuyến tàu từ kết quả tra cứu
+- Chọn toa và chỗ ngồi còn trống
+- Nhập thông tin hành khách: họ tên, CCCD/CMND, số điện thoại
+- Tính tổng tiền vé
+- Xác nhận đặt vé hoặc thanh toán ngay
+- Tạo mã vé duy nhất cho mỗi giao dịch
 
-### 4.6. Quan ly ve
+### 4.6. Quản lý vé
 
-- Tim kiem ve theo ma ve, CCCD hoac so dien thoai
-- Xem chi tiet ve da dat
-- Huy ve theo quy dinh
-- Cap nhat trang thai ve: da dat, da thanh toan, da huy
-- In ve hoac xuat thong tin ve
+- Tìm kiếm vé theo mã vé, CCCD hoặc số điện thoại
+- Xem chi tiết vé đã đặt
+- Hủy vé theo quy định
+- Cập nhật trạng thái vé: đã đặt, đã thanh toán, đã hủy
+- In vé hoặc xuất thông tin vé
 
-### 4.7. Quan ly hanh khach
+### 4.7. Quản lý hành khách
 
-- Luu thong tin hanh khach da mua ve
-- Tim kiem lich su mua ve theo hanh khach
-- Ho tro tai su dung du lieu hanh khach khi mua ve lan sau
+- Lưu thông tin hành khách đã mua vé
+- Tìm kiếm lịch sử mua vé theo hành khách
+- Hỗ trợ tái sử dụng dữ liệu hành khách khi mua vé lần sau
 
-### 4.8. Bao cao - thong ke
+### 4.8. Báo cáo - thống kê
 
-- Thong ke so ve da ban theo ngay
-- Thong ke doanh thu theo ngay, thang
-- Thong ke ti le lap day cho tung chuyen tau
-- Liet ke cac ve da huy
+- Thống kê số vé đã bán theo ngày
+- Thống kê doanh thu theo ngày, tháng
+- Thống kê tỉ lệ lấp đầy cho từng chuyến tàu
+- Liệt kê các vé đã hủy
 
-## 5. Quy trinh nghiep vu chinh
+## 5. Quy trình nghiệp vụ chính
 
-### 5.1. Quy trinh ban ve
+### 5.1. Quy trình bán vé
 
-1. Nhan vien dang nhap he thong
-2. Nhap ga di, ga den, ngay di de tra cuu chuyen tau
-3. Chon chuyen tau phu hop
-4. Chon toa va ghe con trong
-5. Nhap thong tin hanh khach
-6. He thong tinh tien va tao don dat ve
-7. Xac nhan thanh toan
-8. He thong cap nhat cho ngoi va phat hanh ve
+1. Nhân viên đăng nhập hệ thống
+2. Nhập ga đi, ga đến, ngày đi để tra cứu chuyến tàu
+3. Chọn chuyến tàu phù hợp
+4. Chọn toa và ghế còn trống
+5. Nhập thông tin hành khách
+6. Hệ thống tính tiền và tạo đơn đặt vé
+7. Xác nhận thanh toán
+8. Hệ thống cập nhật chỗ ngồi và phát hành vé
 
-### 5.2. Quy trinh huy ve
+### 5.2. Quy trình hủy vé
 
-1. Tim ve theo ma ve hoac thong tin hanh khach
-2. Kiem tra dieu kien huy
-3. Xac nhan huy ve
-4. He thong cap nhat trang thai ve va tra lai cho ngoi trong
+1. Tìm vé theo mã vé hoặc thông tin hành khách
+2. Kiểm tra điều kiện hủy
+3. Xác nhận hủy vé
+4. Hệ thống cập nhật trạng thái vé và trả lại chỗ ngồi trống
 
-## 6. Danh sach man hinh du kien
+## 6. Danh sách màn hình dự kiến
 
-- Man hinh dang nhap
-- Man hinh trang chu / bang dieu khien
-- Man hinh tra cuu chuyen tau
-- Man hinh chon toa - cho ngoi
-- Man hinh lap ve / thanh toan
-- Man hinh quan ly ve
-- Man hinh quan ly lich trinh
-- Man hinh bao cao doanh thu
+- Màn hình đăng nhập
+- Màn hình trang chủ / bảng điều khiển
+- Màn hình tra cứu chuyến tàu
+- Màn hình chọn toa - chỗ ngồi
+- Màn hình lập vé / thanh toán
+- Màn hình quản lý vé
+- Màn hình quản lý lịch trình
+- Màn hình báo cáo doanh thu
 
-## 7. De xuat du lieu chinh cho tuan 3
+## 7. Đề xuất dữ liệu chính cho tuần 3
 
-### 7.1. Bang tai khoan
+### 7.1. Bảng tai_khoan (tài khoản)
 
 - ma_tai_khoan
 - ten_dang_nhap
 - mat_khau
 - vai_tro
 
-### 7.2. Bang ga_tau
+### 7.2. Bảng ga_tau (ga tàu)
 
 - ma_ga
 - ten_ga
 - dia_diem
 
-### 7.3. Bang tau
+### 7.3. Bảng tau (tàu)
 
 - ma_tau
 - ten_tau
 - so_toa
 
-### 7.4. Bang toa_tau
+### 7.4. Bảng toa_tau (toa tàu)
 
 - ma_toa
 - ma_tau
 - loai_ghe
 - so_ghe
 
-### 7.5. Bang lich_trinh
+### 7.5. Bảng lich_trinh (lịch trình)
 
 - ma_lich_trinh
 - ma_tau
@@ -159,14 +159,14 @@ Ung dung du kien co the phat trien bang `Tkinter` hoac `PyQt` trong tuan 2, va k
 - gio_khoi_hanh
 - gio_den
 
-### 7.6. Bang hanh_khach
+### 7.6. Bảng hanh_khach (hành khách)
 
 - ma_hanh_khach
 - ho_ten
 - cccd
 - so_dien_thoai
 
-### 7.7. Bang ve_tau
+### 7.7. Bảng ve_tau (vé tàu)
 
 - ma_ve
 - ma_lich_trinh
@@ -176,8 +176,8 @@ Ung dung du kien co the phat trien bang `Tkinter` hoac `PyQt` trong tuan 2, va k
 - gia_ve
 - trang_thai
 
-## 8. Pham vi hoan thanh trong tuan 1
+## 8. Phạm vi hoàn thành trong tuần 1
 
-- Hoan thien ban mo ta chuc nang
-- Hoan thien mockup cho cac giao dien chinh
-- San sang chuyen sang giai doan code frontend o tuan 2
+- Hoàn thiện bản mô tả chức năng
+- Hoàn thiện mockup cho các giao diện chính
+- Sẵn sàng chuyển sang giai đoạn code frontend ở tuần 2

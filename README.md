@@ -1,11 +1,11 @@
-# Project: Phan mem quan ly ban ve tau
+# Project: Phần mềm quản lý bán vé tàu
 
-Bo bai lam hien tai da co:
+Bộ bài làm hiện tại đã có:
 
-- **Tuan 1:** mo ta chuc nang va mockup giao dien
-- **Tuan 2:** frontend desktop bang `PySide6 + HTML/CSS/JavaScript`, thiet ke `SQLite`, du lieu mau va bridge Python-JS
+- **Tuần 1:** mô tả chức năng và mockup giao diện
+- **Tuần 2:** frontend desktop bằng `PySide6 + HTML/CSS/JavaScript`, thiết kế `SQLite`, dữ liệu mẫu và bridge Python-JS
 
-## Cau truc chinh
+## Cấu trúc chính
 
 - [docs/tuan1/mo-ta-chuc-nang.md](docs/tuan1/mo-ta-chuc-nang.md)
 - [docs/tuan1/mockup-ui.svg](docs/tuan1/mockup-ui.svg)
@@ -14,14 +14,14 @@ Bo bai lam hien tai da co:
 - `app.py`
 - `src/train_ticket_app/`
 
-## Thu vien can cai
+## Thư viện cần cài
 
-Tat ca thu vien ngoai thu vien chuan da duoc khai bao trong [requirements.txt](requirements.txt):
+Tất cả thư viện ngoài thư viện chuẩn đã được khai báo trong [requirements.txt](requirements.txt):
 
 - `PySide6`
 - `numpy`
 
-## Cach chay
+## Cách chạy
 
 ```bash
 python -m venv .venv
@@ -30,13 +30,13 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## Tai khoan demo
+## Tài khoản demo
 
 - `admin / admin123`
 - `staff / staff123`
 
-## Ghi chu
+## Ghi chú
 
-- CSDL SQLite duoc tao tu dong tai `data/train_ticket.db`
-- Frontend duoc ve bang `HTML/CSS/JS` va hien thi trong `QWebEngineView`
-- `numpy` duoc dung de tinh tong doanh thu va ti le lap day trong dashboard
+- CSDL SQLite được tạo tự động tại `data/train_ticket.db`
+- Frontend được vẽ bằng `HTML/CSS/JS` và hiển thị trong `QWebEngineView`
+- `numpy` được dùng để tính tổng doanh thu và tỉ lệ lấp đầy trong dashboard
