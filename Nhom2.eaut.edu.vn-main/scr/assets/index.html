@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quan ly ban ve tau</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <section id="login-screen" class="screen active">
+      <div class="login-card">
+        <p class="eyebrow">Desktop App - PySide6 + JavaScript</p>
+        <h1>Phan mem quan ly ban ve tau</h1>
+        <p class="hint">Tai khoan demo: <strong>admin/admin123</strong> hoac <strong>staff/staff123</strong></p>
+        <div class="field">
+          <label for="username">Ten dang nhap</label>
+          <input id="username" value="admin">
+        </div>
+        <div class="field">
+          <label for="password">Mat khau</label>
+          <input id="password" type="password" value="admin123">
+        </div>
+        <button id="login-btn">Dang nhap</button>
+        <p id="login-message" class="message"></p>
+      </div>
+    </section>
+
+    <section id="main-screen" class="screen">
+      <aside class="sidebar">
+        <h2>Train Ticket</h2>
+        <p id="user-badge" class="user-badge"></p>
+        <nav>
+          <button class="nav-btn active" data-panel="dashboard-panel">Tong quan</button>
+          <button class="nav-btn" data-panel="booking-panel">Tra cuu va dat ve</button>
+          <button class="nav-btn" data-panel="tickets-panel">Quan ly ve</button>
+          <button class="nav-btn" data-panel="schedules-panel">Lich trinh</button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Week 2 Deliverable</p>
+            <h1>Frontend desktop voi giao dien HTML/JS</h1>
+          </div>
+          <div class="hero-note">SQLite + Numpy analytics + QWebChannel</div>
+        </header>
+
+        <section id="dashboard-panel" class="panel active">
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span>Ve da ban</span>
+              <strong id="stat-sold">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Doanh thu</span>
+              <strong id="stat-revenue">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Chuyen dang mo</span>
+              <strong id="stat-trips">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Ti le lap day</span>
+              <strong id="stat-occupancy">0%</strong>
+            </article>
+          </div>
+        </section>
+
+        <section id="booking-panel" class="panel">
+          <div class="panel-grid">
+            <div class="card">
+              <h3>Tra cuu chuyen tau</h3>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="origin">Ga di</label>
+                  <input id="origin" placeholder="Ho Chi Minh">
+                </div>
+                <div class="field">
+                  <label for="destination">Ga den</label>
+                  <input id="destination" placeholder="Nha Trang">
+                </div>
+                <div class="field">
+                  <label for="travel-date">Ngay di</label>
+                  <input id="travel-date" type="date" value="2026-04-20">
+                </div>
+              </div>
+              <button id="search-btn">Tim chuyen</button>
+              <div id="trip-list" class="list"></div>
+            </div>
+
+            <div class="card">
+              <h3>Dat ve</h3>
+              <p id="selected-trip" class="hint">Chua chon chuyen tau.</p>
+              <div id="seat-map" class="seat-map"></div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="full-name">Ho ten hanh khach</label>
+                  <input id="full-name">
+                </div>
+                <div class="field">
+                  <label for="id-number">CCCD/CMND</label>
+                  <input id="id-number">
+                </div>
+                <div class="field">
+                  <label for="phone">So dien thoai</label>
+                  <input id="phone">
+                </div>
+              </div>
+              <button id="booking-btn">Xac nhan dat ve</button>
+              <p id="booking-message" class="message"></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="tickets-panel" class="panel">
+          <div class="card">
+            <h3>Quan ly ve</h3>
+            <div class="toolbar">
+              <input id="ticket-query" placeholder="Nhap ma ve, CCCD, SDT, ten hanh khach">
+              <button id="ticket-search-btn">Tim</button>
+            </div>
+            <div id="ticket-list" class="list"></div>
+          </div>
+        </section>
+
+        <section id="schedules-panel" class="panel">
+          <div class="card">
+            <h3>Lich trinh va bao cao</h3>
+            <div id="schedule-list" class="list"></div>
+          </div>
+        </section>
+      </main>
+    </section>
+  </div>
+
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

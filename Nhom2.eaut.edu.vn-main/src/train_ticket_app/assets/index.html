@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hệ thống Quản lý Bán vé Tàu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Màn hình Đăng nhập -->
+    <section id="login-screen" class="screen active">
+      <div class="login-card">
+        <p class="eyebrow">Hệ thống Nội bộ - v1.2</p>
+        <h1>Phần mềm Quản lý Bán vé Tàu</h1>
+        <p class="hint">Tài khoản demo: <strong>admin/admin123</strong> hoặc <strong>staff/staff123</strong></p>
+        
+        <div class="field">
+          <label for="username">Tên đăng nhập</label>
+          <input id="username" value="admin" placeholder="Nhập tên đăng nhập">
+        </div>
+        <div class="field">
+          <label for="password">Mật khẩu</label>
+          <input id="password" type="password" value="admin123" placeholder="Nhập mật khẩu">
+        </div>
+        
+        <button id="login-btn">Đăng nhập vào hệ thống</button>
+        <p id="login-message" class="message"></p>
+      </div>
+    </section>
+
+    <!-- Màn hình Chính -->
+    <section id="main-screen" class="screen">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <span class="logo-icon">🚂</span>
+            <h2>TrainTicket</h2>
+          </div>
+        </div>
+        
+        <div id="user-badge" class="user-badge"></div>
+        
+        <nav class="sidebar-nav">
+          <button class="nav-btn active" data-panel="dashboard-panel">
+            <span class="icon">📊</span> Tổng quan
+          </button>
+          <button class="nav-btn" data-panel="booking-panel">
+            <span class="icon">🔍</span> Tra cứu & Đặt vé
+          </button>
+          <button class="nav-btn" data-panel="tickets-panel">
+            <span class="icon">🎟️</span> Quản lý vé
+          </button>
+          <button class="nav-btn" data-panel="schedules-panel">
+            <span class="icon">📅</span> Lịch trình
+          </button>
+        </nav>
+        
+        <div class="sidebar-footer">
+          <p>© 2026 Train System</p>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Bảng điều khiển hệ thống</p>
+            <h1>Quản lý Vận tải Đường sắt</h1>
+          </div>
+          <div class="hero-stats-mini">
+            <div class="mini-stat">
+              <span id="current-time">00:00:00</span>
+            </div>
+            <div class="hero-note">SQLite + QWebChannel</div>
+          </div>
+        </header>
+
+        <!-- Panel: Tổng quan -->
+        <section id="dashboard-panel" class="panel active">
+          <div class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-info">
+                <span>Vé đã bán</span>
+                <strong id="stat-sold">0</strong>
+              </div>
+              <div class="stat-icon sold">🎟️</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-info">
+                <span>Doanh thu</span>
+                <strong id="stat-revenue">0</strong>
+              </div>
+              <div class="stat-icon revenue">💰</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-info">
+                <span>Chuyến đang mở</span>
+                <strong id="stat-trips">0</strong>
+              </div>
+              <div class="stat-icon trips">🛤️</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-info">
+                <span>Tỉ lệ lấp đầy</span>
+                <strong id="stat-occupancy">0%</strong>
+              </div>
+              <div class="stat-icon occupancy">📈</div>
+            </article>
+          </div>
+          
+          <div class="dashboard-charts-placeholder card">
+            <h3>Biểu đồ phân tích doanh thu (Numpy Analytics)</h3>
+            <div class="chart-box">
+              <p class="muted">Đang tải dữ liệu phân tích từ Python backend...</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Panel: Đặt vé -->
+        <section id="booking-panel" class="panel">
+          <div class="panel-grid">
+            <div class="card">
+              <h3>Tra cứu chuyến tàu</h3>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="origin">Ga đi</label>
+                  <input id="origin" placeholder="TP. Hồ Chí Minh">
+                </div>
+                <div class="field">
+                  <label for="destination">Ga đến</label>
+                  <input id="destination" placeholder="Nha Trang">
+                </div>
+                <div class="field">
+                  <label for="travel-date">Ngày đi</label>
+                  <input id="travel-date" type="date" value="2026-04-20">
+                </div>
+              </div>
+              <button id="search-btn" class="w-100">Tìm chuyến tàu phù hợp</button>
+              
+              <div class="list-container">
+                <div id="trip-list" class="list"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Thông tin đặt vé</h3>
+              <p id="selected-trip" class="hint">Vui lòng chọn chuyến tàu ở danh sách bên trái.</p>
+              
+              <div class="seat-selection-header">
+                <h4>Bước 1: Chọn toa</h4>
+                <div class="seat-legend">
+                  <span class="legend-item"><i class="sq available"></i> Trống</span>
+                  <span class="legend-item"><i class="sq booked"></i> Đã đặt</span>
+                  <span class="legend-item"><i class="sq selected"></i> Đang chọn</span>
+                </div>
+              </div>
+
+              <div id="carriage-list" class="carriage-list"></div>
+
+              <div class="seat-selection-header">
+                <h4>Bước 2: Chọn ghế</h4>
+              </div>
+              <p id="selected-seat" class="hint">Chưa chọn toa/ghế</p>
+              <div id="seat-map" class="seat-map"></div>
+              
+              <div class="form-grid stack">
+                <div class="field">
+                  <label for="full-name">Họ tên hành khách</label>
+                  <input id="full-name" placeholder="Ví dụ: Nguyễn Văn A">
+                </div>
+                <div class="field">
+                  <label for="id-number">CCCD/CMND</label>
+                  <input id="id-number" placeholder="Số căn cước công dân">
+                </div>
+                <div class="field">
+                  <label for="phone">Số điện thoại</label>
+                  <input id="phone" placeholder="Số điện thoại liên lạc">
+                </div>
+              </div>
+              <button id="booking-btn" class="secondary w-100">Xác nhận đặt vé & Xuất hóa đơn</button>
+              <p id="booking-message" class="message"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Panel: Quản lý vé -->
+        <section id="tickets-panel" class="panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>Quản lý vé đã đặt</h3>
+              <div class="toolbar">
+                <input id="ticket-query" placeholder="Nhập mã vé, CCCD, SĐT, tên hành khách...">
+                <button id="ticket-search-btn">Tìm kiếm</button>
+              </div>
+            </div>
+            <div id="ticket-list" class="list mt-20"></div>
+          </div>
+        </section>
+
+        <!-- Panel: Lịch trình -->
+        <section id="schedules-panel" class="panel">
+          <div class="card">
+            <h3>Lịch trình và Báo cáo vận hành</h3>
+            <div id="schedule-list" class="list mt-20"></div>
+          </div>
+        </section>
+      </main>
+    </section>
+  </div>
+
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Cập nhật đồng hồ thời gian thực
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById('current-time').textContent = now.toLocaleTimeString('vi-VN');
+    }, 1000);
+  </script>
+</body>
+</html>

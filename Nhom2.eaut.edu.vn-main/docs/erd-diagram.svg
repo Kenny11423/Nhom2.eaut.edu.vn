@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1120" viewBox="0 0 1560 1120">
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .title { font: 700 28px "Segoe UI", Arial, sans-serif; fill: #19324a; }
+      .subtitle { font: 15px "Segoe UI", Arial, sans-serif; fill: #61758c; }
+      .entity { fill: #ffffff; stroke: #738ba8; stroke-width: 2; rx: 14; ry: 14; }
+      .head { fill: #20384f; }
+      .name { font: 700 18px "Segoe UI", Arial, sans-serif; fill: #ffffff; }
+      .text { font: 14px "Consolas", "Courier New", monospace; fill: #28425d; }
+      .pk { font: 700 14px "Consolas", "Courier New", monospace; fill: #0c6a4b; }
+      .fk { font: 700 14px "Consolas", "Courier New", monospace; fill: #a45324; }
+      .rel { stroke: #617b98; stroke-width: 2; fill: none; }
+      .card { font: 700 13px "Segoe UI", Arial, sans-serif; fill: #4f6782; }
+      .note { font: 14px "Segoe UI", Arial, sans-serif; fill: #61758c; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1560" height="1120"/>
+  <text class="title" x="40" y="52">Sơ đồ ERD - Hệ thống quản lý bán vé tàu</text>
+  <text class="subtitle" x="40" y="78">Mô hình theo ý tưởng mới: một chuyến có nhiều ga dừng và danh sách toa được gán linh hoạt theo từng chuyến.</text>
+
+  <g transform="translate(40,120)">
+    <rect class="entity" x="0" y="0" width="230" height="155"/>
+    <rect class="head" x="0" y="0" width="230" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="230" height="16"/>
+    <text class="name" x="16" y="27">stations</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="text" x="16" y="91">code UNIQUE</text>
+    <text class="text" x="16" y="114">name</text>
+    <text class="text" x="16" y="137">city</text>
+  </g>
+
+  <g transform="translate(300,110)">
+    <rect class="entity" x="0" y="0" width="280" height="200"/>
+    <rect class="head" x="0" y="0" width="280" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="280" height="16"/>
+    <text class="name" x="16" y="27">trips</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="fk" x="16" y="91">FK  train_id</text>
+    <text class="text" x="16" y="114">trip_code UNIQUE</text>
+    <text class="text" x="16" y="137">departure_date</text>
+    <text class="text" x="16" y="160">departure_time</text>
+    <text class="text" x="16" y="183">arrival_time</text>
+    <text class="text" x="160" y="137">base_price</text>
+    <text class="text" x="160" y="160">status</text>
+  </g>
+
+  <g transform="translate(650,150)">
+    <rect class="entity" x="0" y="0" width="180" height="130"/>
+    <rect class="head" x="0" y="0" width="180" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="180" height="16"/>
+    <text class="name" x="16" y="27">trains</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="text" x="16" y="91">code UNIQUE</text>
+    <text class="text" x="16" y="114">name</text>
+  </g>
+
+  <g transform="translate(90,420)">
+    <rect class="entity" x="0" y="0" width="300" height="200"/>
+    <rect class="head" x="0" y="0" width="300" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="300" height="16"/>
+    <text class="name" x="16" y="27">station_trips</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="fk" x="16" y="91">FK  station_id</text>
+    <text class="fk" x="16" y="114">FK  trip_id</text>
+    <text class="text" x="16" y="137">stop_order</text>
+    <text class="text" x="16" y="160">arrival_time</text>
+    <text class="text" x="16" y="183">departure_time</text>
+  </g>
+
+  <g transform="translate(700,380)">
+    <rect class="entity" x="0" y="0" width="310" height="180"/>
+    <rect class="head" x="0" y="0" width="310" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="310" height="16"/>
+    <text class="name" x="16" y="27">carriage_trips</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="fk" x="16" y="91">FK  trip_id</text>
+    <text class="fk" x="16" y="114">FK  carriage_id</text>
+    <text class="text" x="16" y="137">carriage_order</text>
+  </g>
+
+  <g transform="translate(1140,360)">
+    <rect class="entity" x="0" y="0" width="250" height="155"/>
+    <rect class="head" x="0" y="0" width="250" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="250" height="16"/>
+    <text class="name" x="16" y="27">carriages</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="text" x="16" y="91">carriage_code</text>
+    <text class="text" x="16" y="114">seat_type</text>
+    <text class="text" x="16" y="137">seat_count</text>
+  </g>
+
+  <g transform="translate(760,620)">
+    <rect class="entity" x="0" y="0" width="300" height="180"/>
+    <rect class="head" x="0" y="0" width="300" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="300" height="16"/>
+    <text class="name" x="16" y="27">trip_seats</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="fk" x="16" y="91">FK  carriage_trip_id</text>
+    <text class="text" x="16" y="114">seat_code</text>
+    <text class="text" x="16" y="137">seat_type</text>
+    <text class="text" x="16" y="160">seat_price</text>
+    <text class="text" x="170" y="160">status</text>
+  </g>
+
+  <g transform="translate(1090,830)">
+    <rect class="entity" x="0" y="0" width="300" height="205"/>
+    <rect class="head" x="0" y="0" width="300" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="300" height="16"/>
+    <text class="name" x="16" y="27">tickets</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="text" x="16" y="91">ticket_code UNIQUE</text>
+    <text class="fk" x="16" y="114">FK  passenger_id</text>
+    <text class="fk" x="16" y="137">FK  trip_id</text>
+    <text class="fk" x="16" y="160">FK  trip_seat_id</text>
+    <text class="fk" x="16" y="183">FK  booked_by</text>
+    <text class="text" x="165" y="114">price</text>
+    <text class="text" x="165" y="137">status</text>
+    <text class="text" x="165" y="160">booked_at</text>
+  </g>
+
+  <g transform="translate(820,870)">
+    <rect class="entity" x="0" y="0" width="200" height="145"/>
+    <rect class="head" x="0" y="0" width="200" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="200" height="16"/>
+    <text class="name" x="16" y="27">passengers</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="text" x="16" y="91">full_name</text>
+    <text class="text" x="16" y="114">id_number UNIQUE</text>
+    <text class="text" x="16" y="137">phone</text>
+  </g>
+
+  <g transform="translate(470,850)">
+    <rect class="entity" x="0" y="0" width="220" height="145"/>
+    <rect class="head" x="0" y="0" width="220" height="42" rx="14" ry="14"/>
+    <rect class="head" x="0" y="26" width="220" height="16"/>
+    <text class="name" x="16" y="27">users</text>
+    <text class="pk" x="16" y="68">PK  id</text>
+    <text class="text" x="16" y="91">username UNIQUE</text>
+    <text class="text" x="16" y="114">full_name</text>
+    <text class="text" x="16" y="137">role</text>
+  </g>
+
+  <line class="rel" x1="270" y1="198" x2="300" y2="205"/>
+  <text class="card" x="278" y="186">N</text>
+  <text class="card" x="286" y="224">N</text>
+
+  <line class="rel" x1="150" y1="275" x2="180" y2="420"/>
+  <text class="card" x="120" y="360">1</text>
+  <text class="card" x="165" y="406">N</text>
+
+  <line class="rel" x1="420" y1="310" x2="360" y2="420"/>
+  <text class="card" x="400" y="350">1</text>
+  <text class="card" x="372" y="405">N</text>
+
+  <line class="rel" x1="580" y1="205" x2="650" y2="205"/>
+  <text class="card" x="598" y="195">N</text>
+  <text class="card" x="628" y="195">1</text>
+
+  <line class="rel" x1="580" y1="230" x2="700" y2="430"/>
+  <text class="card" x="610" y="276">1</text>
+  <text class="card" x="680" y="408">N</text>
+
+  <line class="rel" x1="1010" y1="445" x2="1140" y2="438"/>
+  <text class="card" x="1040" y="430">N</text>
+  <text class="card" x="1110" y="430">1</text>
+
+  <line class="rel" x1="890" y1="560" x2="900" y2="620"/>
+  <text class="card" x="902" y="585">1</text>
+  <text class="card" x="908" y="610">N</text>
+
+  <line class="rel" x1="975" y1="800" x2="1160" y2="830"/>
+  <text class="card" x="1002" y="790">1</text>
+  <text class="card" x="1128" y="818">0..1</text>
+
+  <line class="rel" x1="1020" y1="930" x2="1090" y2="930"/>
+  <text class="card" x="1036" y="920">1</text>
+  <text class="card" x="1070" y="920">N</text>
+
+  <line class="rel" x1="690" y1="920" x2="1090" y2="980"/>
+  <text class="card" x="786" y="930">1</text>
+  <text class="card" x="1062" y="968">N</text>
+
+  <line class="rel" x1="440" y1="310" x2="1180" y2="830"/>
+  <text class="card" x="612" y="430">1</text>
+  <text class="card" x="1150" y="815">N</text>
+
+  <text class="note" x="40" y="1060">Ghi chú: `station_trips` lưu các điểm dừng theo thứ tự của chuyến; `carriage_trips` cho phép cùng một tàu có cấu hình toa khác nhau ở từng ngày/chuyến.</text>
+</svg>

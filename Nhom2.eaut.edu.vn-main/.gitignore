@@ -1,0 +1,3 @@
+__pycache__/
+*.pyc
+data/train_ticket.db
